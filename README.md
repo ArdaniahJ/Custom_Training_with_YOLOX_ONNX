@@ -1,11 +1,5 @@
 # I Want That LOOK - YOLOX Fashion Search Enabler
 
-
-
-<p align="center">
-  <img src="https://github.com/ArdaniahJ/Custom_Training_with_YOLOX_ONNX/blob/main/demo.gif" height="300" />
-</p>
-
 # Overview
 Featuring `YOLOX`, Fashion Search is tailored to the needs of customers dealing with a wide range of apparel (see tables below for the apparel listed). 
 
