@@ -1,2 +1,6 @@
-# Custom_Training_with_YOLOX_ONNX
-End to end fashion recommendation system pipeline. It includes Pose detection, fashion object detection, generation embedding for images and an image retrieval system.
+# I Want That LOOK - YOLOX Fashion Search Enabler
+
+# Overview
+Using YOLOX, Fashion Search is tailored to the needs of customers dealing with a wide range of apparel (such as clothes, footwear, jewellery, and other accessories). Fashion Search covers apparel detection based on visitors’ pictures, enabling sellers to build a memorable customer experience, make them happier and boost sales
+
+
