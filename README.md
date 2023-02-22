@@ -74,7 +74,6 @@ REMO.ai gives out JSON format to export, while YOLOX takes in XML format. Hence 
 
 !pip3 install -U pip && pip3 install -r requirements.txt
 !pip3 install -v -e . # or python3 setup.py develop
-!pip3 install wandb # to track the training log
 ```
 # Training
 ## Training Preparation
