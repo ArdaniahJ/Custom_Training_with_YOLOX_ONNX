@@ -65,7 +65,7 @@ REMO.ai gives out JSON format to export, while YOLOX takes in XML format. Hence 
  from google.colab import files
  uploaded = files.upload()
  ```
-# Installation of YOLOX Model (Colab ver):
+# Installation of YOLOX Model:
 ```python
 !git clone https://github.com/Megvii-BaseDetection/YOLOX
 
@@ -77,7 +77,7 @@ REMO.ai gives out JSON format to export, while YOLOX takes in XML format. Hence 
 ```
 # Training
 ## Training Preparation
-Sort the necessary files to a Pascal VOC folder for the one time json to xml conversion (Colab ver;
+Sort the necessary files to a Pascal VOC folder for the one time json to xml conversion;
 ```python
 !pwd # make sure to be in /content/YOLOX/dataset directory
 
@@ -122,7 +122,7 @@ Play around with the confidence score and compare the mAP:
 !python3 tools/export_onnx.py -f exps/example/yolox_voc/yolox_voc_x.py --output-name weights/best_yolox_x.onnx -c weights/best_yolox_x.pth
 ```
 
-Download he model with ONNX's optimized best weights (Colab ver) 
+Download he model with ONNX's optimized best weights
 ```python
 # Redirect the directory 
 %cd /YOLOX/weights/
