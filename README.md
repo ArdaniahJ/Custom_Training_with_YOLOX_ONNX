@@ -13,7 +13,7 @@ Featuring `YOLOX`, Fashion Search is tailored to the needs of customers dealing 
 # About Dataset
 The image datasets are collected from 2 open resources:
 1. Publicly available fashion dataset: [Kaggle](https://www.kaggle.com/datasets/nguyngiabol/colorful-fashion-dataset-for-object-detection)
-2. Custom dataset from Google images and the sites of web fashion shops
+2. Custom dataset from Google images and the sites of web fashion shops: [Raw External Images ](https://github.com/ArdaniahJ/Custom_Training_with_YOLOX_ONNX/blob/main/Raw%20external%20images%20for%20annotations.zip)
 
 ## Custom Image Annotations on Remo.ai
 <p align="center">
@@ -31,8 +31,9 @@ python -m remo_ap
 ```
 
 Login/Sign Up, Upload the raw images (scraped online) and start annotating. 
+Afterwards, add those annotated images in folder `JPEGImages` to become a whole complete dataset.
 
-The image data consisted of 11 classes:
+Finally, the image data consisted of 11 classes:
   
  Class | Label|
 | :------------: |:---------------:|
@@ -49,9 +50,9 @@ The image data consisted of 11 classes:
 | 10 | top   |
 
 ## Converting from Remo JSON Format to PASCAL VOC Format (.xml)
-REMO.ai takes in JSON format to export, while YOLOX takes in XML format. Hence 2 functions for the conversion are written for such action;
-1. a function __to specify bounding boxes in xml__ ([bbox_to_xml.py](https://github.com/ArdaniahJ/Custom_Training_with_YOLOX_ONNX/blob/main/bbox_to_xml.py))
-2. Next is function that __reads & convert the json file to xml__ ([json_to_xml.py](https://github.com/ArdaniahJ/Custom_Training_with_YOLOX_ONNX/blob/main/json_to_xml.py))
+REMO.ai gives out JSON format to export, while YOLOX takes in XML format. Hence 2 functions for the conversion are written for such action;
+1. function __to specify bounding boxes in xml__ ([bbox_to_xml.py](https://github.com/ArdaniahJ/Custom_Training_with_YOLOX_ONNX/blob/main/bbox_to_xml.py))
+2. function that __reads & convert the json file to xml__ ([json_to_xml.py](https://github.com/ArdaniahJ/Custom_Training_with_YOLOX_ONNX/blob/main/json_to_xml.py))
 
  Before run __json_to_xml.py__ ;
  1. Make a new directory with a new folder named 'annotations'
@@ -75,7 +76,8 @@ REMO.ai takes in JSON format to export, while YOLOX takes in XML format. Hence 2
 !pip3 install -v -e . # or python3 setup.py develop
 !pip3 install wandb # to track the training log
 ```
-# Training Preparation
+# Training
+## Training Preparation
 Sort the necessary files to a Pascal VOC folder for the one time json to xml conversion (Colab ver;
 ```python
 !pwd # make sure to be in /content/YOLOX/dataset directory
@@ -89,8 +91,7 @@ shutil.move ("/content/YOLOX/datasets/fashion/colorful_fashion_dataset_for_objec
 shutil.move ("/content/YOLOX/datasets/fashion/colorful_fashion_dataset_for_object_detection/JPEGImages", "/content/YOLOX/datasets/VOCdevkit/VOC2007")
 ```
 
-# Training (make sure to be in /content/YOLOX directory)
-### In order to avoid error during training. 
+## In order to avoid error during training. 
 
 Go to `/content/YOLOX/exps/example/yolox_voc/yolox_voc_x.py` line 46 & 102. 
 
