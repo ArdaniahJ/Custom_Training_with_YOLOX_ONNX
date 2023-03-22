@@ -7,7 +7,7 @@ It all starts and ends with the customer experience.
 # Overview
 `Empowering Fashion Search with YOLOX Object Detection to Enhance Fashion Recognition and Recommendation.` Featuring `YOLOX`, Fashion Search is tailored to the needs of customers dealing with a wide range of apparel (see tables below for the apparel listed). <br><br>`Fashion Search Enabler` is a garments detection detector based on YOLOX. Given a fashion image, the detector is able to finds and localize potential garments and recommend the similar or the exact garments by the end of every clicks. 
 
-## Expected Tangible Outcome
+## Expected Industry Tangible Outcome
 __The goal of this project is to develop a personalized fashion search engine utilizing YOLOX _to achieve 40% accuracy and efficiency_ from client's current system, targeting to _boost gross monthly sales revenue by 15% within 6 months_ after intergratio with client's E-commerce platform__
 
 # About Dataset
